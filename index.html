@@ -657,5 +657,12 @@ function openQaPopup(t,img){ var b=document.getElementById('qa-popup-text'); b.t
 function closeQaPopup(){ document.getElementById('qa-popup').classList.remove('show'); }
 </script>
 <script>/* itag-fit */(function(){function fit(){document.querySelectorAll('.itag').forEach(function(e){e.style.fontSize='';var s=parseFloat(getComputedStyle(e).fontSize);while(e.scrollWidth>e.clientWidth&&s>8){s-=0.5;e.style.fontSize=s+'px';}});}window.addEventListener('load',fit);window.addEventListener('resize',fit);if(document.fonts)document.fonts.ready.then(fit);})();</script>
+<style>/* home-btn */
+#home-btn{position:fixed;top:12px;left:12px;z-index:300;display:inline-flex;align-items:center;gap:4px;padding:7px 14px;border-radius:999px;background:rgba(255,255,255,.14);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.3);color:#fff;font-family:'Noto Sans JP',sans-serif;font-size:.8rem;font-weight:700;text-decoration:none;box-shadow:0 2px 10px rgba(0,0,0,.25);transition:background .2s,transform .2s;}
+#home-btn:hover{background:rgba(255,255,255,.26);transform:translateY(-1px);}
+#home-btn[hidden]{display:none!important;}
+</style>
+<a id="home-btn" href="https://inakichi1744.github.io/00_quiz/" aria-label="クイズ一覧へ戻る">🏠 一覧へ</a>
+<script>/* home-btn */(function(){var b=document.getElementById('home-btn');function u(){var q=document.getElementById('quiz-screen');var s=q?getComputedStyle(q).display:'none';b.hidden=(s!=='none');}setInterval(u,300);u();})();</script>
 </body>
 </html>
