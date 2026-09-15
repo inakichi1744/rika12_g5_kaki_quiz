@@ -442,7 +442,7 @@ let questions=[], currentIndex=0, correctCount=0, wrongCount=0, answered=false, 
 
 function startQuiz(questionSet){
   const isReview=!!questionSet;
-  questions=questionSet||orderQuestions(ALL_QUESTIONS);
+  questions=questionSet||[...ALL_QUESTIONS];
   currentIndex=0; correctCount=0; wrongCount=0; results=[]; answered=false; exp=0;
   if(!isReview) earnedTitles=[];
   document.getElementById('intro-screen').style.display='none';
